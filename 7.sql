@@ -1,1 +1,4 @@
-SELECT AVG(energy) FROM SONGS WHERE artist_id = (SELECT id FROM artists WHERE name = 'Drake');
+SELECT title, rating
+FROM movies JOIN ratings ON movies.id = ratings.movie_id
+WHERE year = 2010
+ORDER BY rating DESC, title ASC;
